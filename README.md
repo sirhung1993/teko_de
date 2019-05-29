@@ -22,4 +22,6 @@
 ## Notes
 
 - Due to the runtime environment differences, there may be some configurations issues relating to docker or docker-compose
+- ConcourseCI tool has no usage in this demo. Perhap, it will be used in an dynamic demonstration instead of static csv file input.
+
   
