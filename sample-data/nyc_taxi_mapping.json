@@ -1,0 +1,121 @@
+{
+    "template": "nyc-taxi",
+    "settings": {
+        "number_of_shards": 1
+    },
+    "mappings": {
+        "properties": {
+            "@timestamp": {
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss || strict_date_optional_time"
+            },
+            "@version": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "dropoff_datetime": {
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss || strict_date_optional_time"
+            },
+            "dropoff_location": {
+                "type": "geo_point"
+            },
+            "fare_amount": {
+                "type": "float"
+            },
+            "host": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "message": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "mta_tax": {
+                "type": "float"
+            },
+            "passenger_count": {
+                "type": "long"
+            },
+            "path": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "payment_type": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "pickup_datetime": {
+                "type": "date",
+                "format": "yyyy-MM-dd HH:mm:ss || strict_date_optional_time"
+            },
+            "pickup_location": {
+                "type": "geo_point"
+            },
+            "rate_code": {
+                "type": "long"
+            },
+            "store_and_fwd_flag": {
+                "type": "boolean"
+            },
+            "surcharge": {
+                "type": "float"
+            },
+            "tags": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "tip_amount": {
+                "type": "float"
+            },
+            "tolls_amount": {
+                "type": "float"
+            },
+            "total_amount": {
+                "type": "float"
+            },
+            "trip_distance": {
+                "type": "float"
+            },
+            "vendor_id": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            }
+        }
+    }
+}
